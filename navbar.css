@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --ff-primary: 'Roboto', sans-serif;
+    --spacing : 0.5rem ;
+}
+/*Globals*/
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+body{
+    background-color: rgb(241,245, 248);
+    font-family: var(--ff-primary);
+    letter-spacing: var(--spacing);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/*By default, hide links*/
+.links{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+
+}
+.show-links{
+    height: 10rem;
+}
+ul{
+    list-style-type: none;
+}
+.links a{
+    font-size: 1 rem;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    will-change: transform;
+    transition: transform 450ms;
+}
+
+.links a:hover{
+    transition: transform 125ms ;
+    transform: translateX(30px);
+    background: rgba(66, 153, 181, 0.5);
+}
+a{
+    text-decoration: none;
+    color: rgb(53,80,103);
+}
+
+nav{
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.nav-toggle{
+    font-size: 2.5rem;
+    color: rgb(66, 153, 181);
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.nav-toggle :hover{
+    transform: rotate(90deg);
+    color: rgb(53,80,103);
+}
+
+.logo{
+    height: 40px;
+}
